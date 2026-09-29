@@ -1,0 +1,193 @@
+/* Shared styles. Plain HTML, local images, and no framework. */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #161d19;
+  color: #e5e3d8;
+  font: 16px/1.75 Arial, Helvetica, sans-serif;
+}
+a { color: #cfb783; text-underline-offset: 4px; }
+a:hover { color: #fff0c9; }
+a:focus-visible, button:focus-visible {
+  outline: 3px solid #eac989;
+  outline-offset: 5px;
+}
+h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: normal; line-height: 1.2; }
+h1 { font-size: 46px; margin: 0 0 14px; }
+h2 { font-size: 28px; margin: 0 0 18px; }
+h3 { font-size: 22px; margin: 0 0 12px; }
+p { margin: 0 0 18px; }
+ul { padding-left: 22px; }
+li { margin-bottom: 9px; }
+img { display: block; max-width: 100%; height: auto; }
+figure { margin: 0; }
+figcaption { padding: 12px 0; color: #afb8aa; font-size: 13px; }
+hr { border: 0; border-top: 1px solid #3c4538; margin: 28px 0; }
+.container { width: 88%; max-width: 1160px; margin: 0 auto; }
+.intro { color: #b9c2b5; font-size: 17px; }
+.small-note, .source-note { font-size: 13px; color: #b2bba9; }
+.skip-link { position: absolute; top: -100px; left: 20px; z-index: 10; padding: 12px; background: #161d19; }
+.skip-link:focus { top: 12px; }
+
+/* Navigation shared by every page. */
+.site-header { border-bottom: 1px solid #3c4538; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 84px; }
+.brand { font: 23px Georgia, serif; color: #e5e3d8; text-decoration: none; white-space: nowrap; }
+.site-header nav { display: flex; gap: 27px; }
+.site-header nav a { padding: 27px 0; color: #b9c2b5; font-size: 14px; text-decoration: none; border-bottom: 2px solid transparent; }
+.site-header nav a[aria-current] { color: #e0c694; border-bottom-color: #c1a671; }
+.page-heading { padding: 44px 0 26px; }
+.page-heading p:last-child { margin-bottom: 0; }
+
+/* Home: current notes beside the actual campaign sketch. */
+.home-layout { display: flex; align-items: flex-start; gap: 58px; padding: 12px 0 34px; }
+.current-notes { width: 47%; }
+.current-notes > ul { color: #c9cebf; margin-top: 0; }
+.next-session { padding: 18px 0 0 20px; margin: 24px 0; border-left: 2px solid #b99e6a; }
+.next-session p { color: #c9cebf; }
+.plain-links { list-style: none; padding: 0; margin-bottom: 0; }
+.map-preview { width: 53%; padding: 14px 14px 0; background: #242b22; border: 1px solid #4d5140; }
+.map-preview img { width: 100%; height: 490px; object-fit: cover; object-position: center 80%; }
+.home-party { margin: 12px 0 54px; padding-top: 32px; border-top: 1px solid #3c4538; }
+.portrait-row { display: flex; gap: 20px; }
+.portrait-row > a { width: 20%; font-size: 14px; text-decoration: none; }
+.portrait-row img { width: 100%; height: 170px; object-fit: cover; object-position: center 25%; border: 1px solid #3c4538; }
+.portrait-row span { display: block; padding-top: 10px; }
+
+/* Session notebook. */
+.jump-links { display: flex; flex-wrap: wrap; gap: 10px 22px; padding: 13px 0; margin-bottom: 30px; border-top: 1px solid #3c4538; border-bottom: 1px solid #3c4538; }
+.jump-links a { font-size: 14px; }
+.journal-layout { display: flex; align-items: flex-start; gap: 52px; margin-bottom: 40px; }
+.journal-layout > div { width: 68%; }
+.journal-entry { margin: 0 0 28px; padding-bottom: 16px; border-bottom: 1px solid #3c4538; scroll-margin-top: 25px; }
+.journal-entry ul { color: #c9cebf; }
+.journal-entry h2 { font-size: 29px; }
+.journal-layout > .lore-box { width: 32%; padding: 24px; background: #20291f; border-top: 2px solid #817451; }
+.lore-box h2 { font-size: 23px; }
+dt { margin-top: 20px; font-weight: bold; color: #d8c395; }
+dd { margin: 3px 0 20px; color: #c0c8b7; }
+.lore-box { font-size: 14px; }
+.status-label { font-size: 12px; color: #cfb783; margin-bottom: 8px; }
+
+/* Party directory and separate character pages. */
+.character-grid { display: flex; flex-wrap: wrap; gap: 38px 26px; margin: 10px 0 60px; }
+.character-card { width: calc(33.33% - 18px); }
+.character-card img { width: 100%; height: 310px; object-fit: cover; object-position: center 25%; border: 1px solid #3c4538; }
+.character-card a:hover img, .portrait-row a:hover img { opacity: 0.85; }
+.character-info { padding: 20px 0; border-bottom: 1px solid #3c4538; }
+.character-info h2 { font-size: 28px; margin-bottom: 10px; }
+.character-info h2 a { color: #e5e3d8; text-decoration: none; }
+.character-info p { margin-bottom: 8px; }
+.character-info > a { font-size: 14px; }
+.breadcrumb { margin: 28px 0; color: #aeb8a6; font-size: 13px; }
+.profile-layout { display: flex; align-items: flex-start; gap: 50px; margin-bottom: 60px; }
+.profile-portrait { width: 35%; }
+.profile-portrait img { width: 100%; height: auto; border: 1px solid #3c4538; }
+.profile-content { width: 65%; max-width: 710px; }
+.profile-content h1 { font-size: 42px; }
+.profile-class { color: #c8cdbf; margin-bottom: 18px; }
+.sheet-link { display: inline-block; padding: 9px 15px; border: 1px solid #817451; text-decoration: none; font-size: 14px; }
+.sheet-link:hover { background: #2d3528; }
+.sheet-facts { display: flex; flex-wrap: wrap; gap: 0 14px; padding: 14px 0; margin: 20px 0 28px; border-top: 1px solid #3c4538; border-bottom: 1px solid #3c4538; font-size: 14px; }
+.sheet-facts dt { width: 100px; margin: 0; }
+.sheet-facts dd { width: calc(100% - 114px); margin: 0; }
+.profile-content section { margin-top: 28px; }
+.profile-content section p { color: #c6cdbd; }
+
+/* Map and setting notes. The full scan remains available through the image link. */
+.world-layout { display: flex; align-items: flex-start; gap: 40px; margin: 8px 0 40px; }
+.world-map { width: 48%; padding: 12px 12px 0; background: #252c22; border: 1px solid #4d5140; }
+.world-map img { width: 100%; height: auto; }
+.region-notes { width: 52%; }
+.region-notes section { padding-bottom: 20px; margin-bottom: 25px; border-bottom: 1px solid #3c4538; }
+.region-notes h2 { font-size: 26px; }
+.region-notes p, .region-notes li { color: #c6cdbd; font-size: 15px; }
+.field-note { padding-left: 16px; border-left: 2px solid #9c895f; font-style: italic; }
+.northern-notes { max-width: 800px; margin: 0 0 50px; padding-top: 28px; border-top: 1px solid #3c4538; }
+
+/* Oswaldo's roller and source table. */
+.button, button {
+  display: inline-block;
+  padding: 11px 20px;
+  border: 1px solid #c7ab76;
+  background: #c7ab76;
+  color: #18211a;
+  font: bold 14px/1.7 Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+button:hover { background: #e0c592; color: #18211a; }
+button:disabled { color: #929c89; background: #273026; border-color: #4b5442; cursor: not-allowed; }
+.secondary-button { color: #dbc38e; background: transparent; border-color: #796e4d; }
+.roller-layout { display: flex; gap: 30px; align-items: flex-start; margin: 12px 0 42px; }
+.roller-panel { width: 65%; padding: 28px; background: #202a20; border: 1px solid #656146; }
+.roller-panel h2 { font-size: 26px; }
+.result-box { display: flex; gap: 24px; align-items: center; min-height: 150px; padding: 20px 0; }
+#roll-number { min-width: 100px; font: 64px/1 Georgia, serif; color: #e7c88d; text-align: center; }
+#roll-effect { margin: 0; color: #d1d6c9; font-size: 14px; }
+.roller-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.meter-label { display: block; margin-top: 15px; font-size: 12px; color: #b8c2b0; }
+meter, progress { display: block; width: 100%; height: 14px; margin: 8px 0; accent-color: #caae78; }
+.table-status { width: 35%; padding: 12px 0; }
+.table-status h2 { font-size: 34px; margin-bottom: 14px; }
+.table-status p { color: #b9c3b4; font-size: 14px; }
+.table-status label { font-size: 13px; }
+.table-status a { font-size: 14px; }
+.table-wrap { margin: 0 0 40px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+caption { padding: 0 0 18px; color: #b9c3b4; text-align: left; font-size: 13px; }
+th, td { padding: 16px 20px; border-bottom: 1px solid #3c4538; text-align: left; vertical-align: top; }
+thead { color: #ddc492; background: #273026; }
+tbody th { width: 94px; color: #e1c594; font: normal 21px Georgia, serif; }
+tbody td { color: #c5cdbf; }
+tbody tr:nth-child(even) { background: #1c241d; }
+tbody tr:target { background: #37402b; outline: 2px solid #baa071; }
+.unwritten td { font-style: italic; color: #adb8a4; }
+.site-footer { padding: 24px 0; border-top: 1px solid #3c4538; font-size: 12px; color: #a8b09e; }
+.site-footer .container { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; }
+.site-footer p { margin: 0; }
+
+/* Stacked layouts on smaller screens. */
+@media (max-width: 850px) {
+  .home-layout, .journal-layout, .world-layout { gap: 28px; }
+  .header-inner { gap: 18px; }
+  .site-header nav { gap: 18px; }
+  .character-card { width: calc(50% - 13px); }
+  .profile-layout { gap: 28px; }
+  .profile-content h1 { font-size: 36px; }
+  .portrait-row { flex-wrap: wrap; gap: 22px; }
+  .portrait-row > a { width: calc(33.33% - 15px); }
+}
+@media (max-width: 680px) {
+  .header-inner { display: block; padding-top: 18px; }
+  .brand { font-size: 22px; }
+  .site-header nav { justify-content: space-between; gap: 12px; }
+  .site-header nav a { padding: 14px 0; font-size: 13px; }
+  .container { width: 90%; }
+  .page-heading { padding-top: 32px; }
+  h1 { font-size: 38px; }
+  .home-layout, .journal-layout, .world-layout, .profile-layout, .roller-layout { display: block; }
+  .current-notes, .map-preview, .journal-layout > div, .journal-layout > .lore-box, .world-map, .region-notes, .profile-portrait, .profile-content, .roller-panel, .table-status { width: 100%; }
+  .map-preview { margin-top: 30px; }
+  .map-preview img { height: 370px; }
+  .world-map { margin-bottom: 35px; }
+  .profile-portrait { max-width: 350px; margin-bottom: 28px; }
+  .profile-content h1 { font-size: 36px; }
+  .profile-content { max-width: none; }
+  .table-status { margin-top: 25px; }
+  .journal-layout > .lore-box { margin-top: 28px; }
+}
+@media (max-width: 430px) {
+  .portrait-row > a { width: calc(50% - 11px); }
+  .portrait-row img { height: 150px; }
+  .character-card { width: 100%; }
+  .character-card img { height: 340px; }
+  .roller-panel { padding: 22px 18px; }
+  .result-box { gap: 14px; align-items: flex-start; }
+  #roll-number { min-width: 65px; font-size: 50px; }
+  th, td { padding: 14px 10px; }
+  tbody th { width: 65px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

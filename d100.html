@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Roll Oswaldo Darius's d100 and read all 54 spell effects recorded in our D&D campaign table.">
+  <title>Oswaldo's D100 | Campaign notes</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Campaign notes</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="sessions.html">Sessions</a>
+        <a href="characters.html">Party</a>
+        <a href="world.html">World</a>
+        <a href="d100.html" aria-current="page">D100</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <header class="page-heading">
+      <h1>Oswaldo's D100</h1>
+      <p><a href="oswaldo.html">Oswaldo's character page</a></p>
+    </header>
+
+    <div class="roller-layout">
+      <section class="roller-panel" aria-labelledby="dice-heading">
+        <h2 id="dice-heading">Roll a d100</h2>
+        <div class="result-box" aria-live="polite" aria-atomic="true">
+          <!-- Daniel's output element shows the number calculated by JavaScript. -->
+          <output id="roll-number" aria-label="D100 result">—</output>
+          <p id="roll-effect">Roll to look up an effect.</p>
+        </div>
+        <!-- A meter measures the current result within the 0–100 range. Zero means no roll. -->
+        <label class="meter-label" for="roll-meter">Position on the d100 · 0 means no roll yet</label>
+        <meter id="roll-meter" min="0" max="100" value="0">No roll yet</meter>
+        <div id="dice-controls" hidden>
+          <div class="roller-actions">
+            <button id="roll-button" type="button">Roll d100</button>
+            <!-- Clear stays disabled until there is a result to clear. -->
+            <button id="clear-button" class="secondary-button" type="button" disabled>Clear result</button>
+          </div>
+        </div>
+        <noscript><p>Use physical dice and look up your result in the table below. Enable JavaScript to use the roller.</p></noscript>
+      </section>
+
+      <aside class="table-status" aria-labelledby="status-heading">
+        <h2 id="status-heading">54 / 100</h2>
+        <!-- Progress tracks how much of the campaign's table has been written. -->
+        <label for="table-progress">Campaign outcomes recorded</label>
+        <progress id="table-progress" value="54" max="100">54 of 100 outcomes</progress>
+        <p>54 effects are written. The roller uses 1–100; ask the DM about unwritten results.</p>
+        <p class="source-note">Source: the original D100 rolls document.</p>
+      </aside>
+    </div>
+
+    <section aria-labelledby="table-heading">
+      <h2 id="table-heading">Roll table</h2>
+      <nav class="jump-links" aria-label="Jump to a roll range">
+        <a href="#roll-1">01–10</a>
+        <a href="#roll-11">11–20</a>
+        <a href="#roll-21">21–30</a>
+        <a href="#roll-31">31–40</a>
+        <a href="#roll-41">41–50</a>
+        <a href="#roll-51">51–54</a>
+        <a href="#roll-55">55–100</a>
+      </nav>
+      <div class="table-wrap">
+        <table>
+          <caption>Campaign house rules, as written in the original document.</caption>
+          <thead><tr><th scope="col">Roll</th><th scope="col">What happens</th></tr></thead>
+          <tbody>
+            <tr id="roll-1"><th scope="row">01</th><td>Your spell fails, flip a coin. If heads, enemy takes &#189; of its curr hp as damage. If tails, you explode and go down to 1hp.</td></tr>
+            <tr id="roll-2"><th scope="row">02</th><td>Your spell backfires and deals 25% of whatever you rolled at yourself.</td></tr>
+            <tr id="roll-3"><th scope="row">03</th><td>Your spell heals you for 35% (ceilinged) of the damage you deal</td></tr>
+            <tr id="roll-4"><th scope="row">04</th><td>You slip on a banana while casting your spell and an anvil falls on a random active entity (teammates or enemies) dealing 2d4 + 2</td></tr>
+            <tr id="roll-5"><th scope="row">05</th><td>Rage fills your lungs as you cast your spell and you deal 2d6 extra damage</td></tr>
+            <tr id="roll-6"><th scope="row">06</th><td>Performance anxiety ruins your spells damage by 1d6 (cannot go negative)</td></tr>
+            <tr id="roll-7"><th scope="row">07</th><td>Clone a teammate, it has 1 hp, but all their offensive abilities (teammates controls it)</td></tr>
+            <tr id="roll-8"><th scope="row">08</th><td>Banish a random entity on the field (charisma save, on fail, banish for 1 minute, if can’t save throughout minute, banished forever)</td></tr>
+            <tr id="roll-9"><th scope="row">09</th><td>Spawn a random pokemon instead of casting spell. Stats decided by dm</td></tr>
+            <tr id="roll-10"><th scope="row">10</th><td>Become allergic to something random every time this is rolled FOR THE REST OF THE CAMPAIGN</td></tr>
+            <tr id="roll-11"><th scope="row">11</th><td>Mordekaiser R a random enemy for 1 minute</td></tr>
+            <tr id="roll-12"><th scope="row">12</th><td>Spell fails and a fish lands on the target enemy (random fish, size proportionate to damage)</td></tr>
+            <tr id="roll-13"><th scope="row">13</th><td>A foul odor emits from your body for the rest of combat (it is combustible)</td></tr>
+            <tr id="roll-14"><th scope="row">14</th><td>You deflect the next spell targeted at you back at the user (your spell still goes)</td></tr>
+            <tr id="roll-15"><th scope="row">15</th><td>Pass go collect $200 (g)</td></tr>
+            <tr id="roll-16"><th scope="row">16</th><td>Cast level 4 fireball in addition to your spell</td></tr>
+            <tr id="roll-17"><th scope="row">17</th><td>You feel an evil prescence watching you… ROLL A D20, if &lt;=3, its hostile, otherwise its friendly. SUMMON THE EYE OF CTHULU</td></tr>
+            <tr id="roll-18"><th scope="row">18</th><td>Summon a friendly skeleton to aide in battle. Follows my orders.</td></tr>
+            <tr id="roll-19"><th scope="row">19</th><td>Teleport to a random spot in the battlefield (dm moves you anywhere)</td></tr>
+            <tr id="roll-20"><th scope="row">20</th><td>A loud voice narrates EVERY thought for the next minute</td></tr>
+            <tr id="roll-21"><th scope="row">21</th><td>Humongous fart that can be heard for 3000 meters</td></tr>
+            <tr id="roll-22"><th scope="row">22</th><td>Random entity pees their pants</td></tr>
+            <tr id="roll-23"><th scope="row">23</th><td>Choose a party member, they become bald</td></tr>
+            <tr id="roll-24"><th scope="row">24</th><td>All enemies now have cancer</td></tr>
+            <tr id="roll-25"><th scope="row">25</th><td>Size doubles for 1 minute (higher armor by 6)</td></tr>
+            <tr id="roll-26"><th scope="row">26</th><td>Call ava mackey, if she doesn’t pick up, I lose half my current HP</td></tr>
+            <tr id="roll-27"><th scope="row">27</th><td>Call Cameron virgin, if they pick up, heal all HP</td></tr>
+            <tr id="roll-28"><th scope="row">28</th><td>Hot oil is poured over your target in addition to your spell 2d10 (if they are fire immune it doesn’t do much)</td></tr>
+            <tr id="roll-29"><th scope="row">29</th><td>All enemies are forced to do basic arithmetic. Upon failure, take 1d10</td></tr>
+            <tr id="roll-30"><th scope="row">30</th><td>A rift opens in the sky and deals 10 radiant damage to your target</td></tr>
+            <tr id="roll-31"><th scope="row">31</th><td>Swap places with a teammate, both you and the teammate heal 5 hp</td></tr>
+            <tr id="roll-32"><th scope="row">32</th><td>Your spell bounces to the nearest entity of the target, with an additional 1d10 on the bounce</td></tr>
+            <tr id="roll-33"><th scope="row">33</th><td>Heal party 12 hp</td></tr>
+            <tr id="roll-34"><th scope="row">34</th><td>Cast chronomancy on yourself, youre fast enough now that you can do two actions your next turn</td></tr>
+            <tr id="roll-35"><th scope="row">35</th><td>Spawn a unicorn that the dm controls. Lasts one minute</td></tr>
+            <tr id="roll-36"><th scope="row">36</th><td>Chains rise from the floor binding all enemies for 1 minute. They can’t move unless they make an agility save of 12</td></tr>
+            <tr id="roll-37"><th scope="row">37</th><td>Up to 3 creatures of your choice take lightning damage. 4d10</td></tr>
+            <tr id="roll-38"><th scope="row">38</th><td>Turn into a pile of goo for the next 3 turns. Can’t take damage but also cant do anything</td></tr>
+            <tr id="roll-39"><th scope="row">39</th><td>Split all enemy in two. Two that deal &#189; damage each and each have &#189; hp</td></tr>
+            <tr id="roll-40"><th scope="row">40</th><td>For the next minute, cast level 1 ray of frost as a bonus action</td></tr>
+            <tr id="roll-41"><th scope="row">41</th><td>A puddle of mud forms at your feet. You can continue to cast spells but can’t move until you do a 12 dex save</td></tr>
+            <tr id="roll-42"><th scope="row">42</th><td>Can’t speak for the next minute</td></tr>
+            <tr id="roll-43"><th scope="row">43</th><td>You are transported to the astral realm for 1 minute, after the minute, you’re brought back to where you were</td></tr>
+            <tr id="roll-44"><th scope="row">44</th><td>For the next minute, you’re moved 5 feet in a random direction at the end of your turn</td></tr>
+            <tr id="roll-45"><th scope="row">45</th><td>Roll a d10, if even, age that amount, if odd, get younger that amount</td></tr>
+            <tr id="roll-46"><th scope="row">46</th><td>You gain a silver tongue and can speak and understand every language for the next hour</td></tr>
+            <tr id="roll-47"><th scope="row">47</th><td>All enemies turn their attention to you for 1 minute</td></tr>
+            <tr id="roll-48"><th scope="row">48</th><td>Cast greater restoration on you and regain all hitpoints</td></tr>
+            <tr id="roll-49"><th scope="row">49</th><td>Your clothes are ignited and you take 1d8 on a failed dex save of 12. Stop drop and roll!</td></tr>
+            <tr id="roll-50"><th scope="row">50</th><td>Cast confusion centerd on yourself</td></tr>
+            <tr id="roll-51"><th scope="row">51</th><td>Perform a team-up attack with any member of your choice(you and the member of your choosing both attack the enemy of your choosing(the person who cast the spell))</td></tr>
+            <tr id="roll-52"><th scope="row">52</th><td>Give someone random an extra action(includes enemies)</td></tr>
+            <tr id="roll-53"><th scope="row">53</th><td>The dm chooses all your actions for the turn</td></tr>
+            <tr id="roll-54"><th scope="row">54</th><td>A spire of mud arises underneath you and all your party members. Leaving us 5 meters above the ground, above our foes.</td></tr>
+            <tr class="unwritten" id="roll-55"><th scope="row">55–100</th><td>No outcomes supplied yet. Ask the DM what happens, or agree to reroll.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>Daniel Isayan · D&amp;D campaign</p><a href="#top">Back to top ↑</a></div>
+  </footer>
+  <script>
+    // Browsers cannot verify SRI on file:// pages. Allow the trusted local file
+    // when double-clicking this page; hosted pages always keep the hash check.
+    function loadLocalDice() {
+      if (window.location.protocol === 'file:') {
+        var localScript = document.createElement('script');
+        localScript.src = 'js/dice.js';
+        document.body.appendChild(localScript);
+      }
+    }
+  </script>
+  <!-- Daniel's integrity attribute verifies this file when served over HTTP(S). -->
+  <script src="js/dice.js" integrity="sha384-TQ+ux3XLGhiaLT3tshOOAu+MIP4XiZdTxfJdS5ljfJgQtFVN/w5kKFPMXQlALW2t" onerror="loadLocalDice()"></script>
+</body>
+</html>
